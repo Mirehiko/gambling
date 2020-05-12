@@ -1,0 +1,7 @@
+<div class="crashMonitor">
+    <div>
+        <h2 class="timeToNewRound" *ngIf="timeToNewRound">Время на ставку: {{ timeToNewRound }} сек</h2>
+        <h2 class="currentRate" *ngIf="!timeToNewRound">Идет игра</h2>
+        <div class="currentRate" *ngIf="!timeToNewRound">x{{ rate }}</div>
+    </div>
+</div>

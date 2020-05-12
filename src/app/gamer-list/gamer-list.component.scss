@@ -1,0 +1,109 @@
+.activePlayers {
+  overflow: hidden;
+  background-color: #334650;
+  border-radius: 10px;
+  // padding: 0 10px;
+  // width: 425px;
+}
+.gamers {
+  overflow: hidden scroll;
+  height: 300px;
+  // margin: 0 -25px 0 0;
+  // padding: 0 10px 0 0;
+  // padding: 0 25px 0 0;
+}
+.gamer {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 50px;
+  align-items: center;
+  border-bottom: 1px solid #3a505d;
+  padding: 5px;
+  transition: all 0.5s;
+  justify-content: space-between;
+
+  &:hover {
+    background-color: #ffffff0a;
+  }
+  &-win {
+    background-color: #3d7143;
+  }
+  &-lose {
+    background-color: #794a4a;
+  }
+  &:last-child {
+    border: none;
+  }
+}
+
+.gamer__item {
+  padding: 0 5px;
+}
+
+.gamerInfo img {
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #666;
+  display: block;
+}
+.gamerInfo {
+  display: flex;
+  align-items: center;
+}
+
+.gamer_name {
+  width: 100%;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 0 0 10px;
+}
+
+.roundStat {
+  display: flex;
+  justify-content: space-between;
+  @media screen and (min-width: 0) {
+    width: 100%;
+    margin: 10px 0 0;
+  }
+  @media screen and (min-width: 768px) {
+    width: auto;
+    margin: 0;
+  }
+}
+
+.roundStat__item {
+  padding: 0 3px;
+
+  span {
+    display: inline-block;
+    text-align: center;
+    width: 70px;
+    padding: 2px 5px;
+  }
+}
+
+.roundBet {
+  color: #ffbe00;
+}
+
+.roundRate {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #5a5959;
+  &-win {
+    border-color: #a5e0a7;
+    background-color: #45b151;
+  }
+  &-lose {
+    border-color: #9e6d6d;
+    background-color: #a72f2f;
+  }
+}
+.roundPrize {
+  border-radius: 5px;
+  // border: 1px solid #9e6d6d;
+  // background-color: #a72f2f;
+}

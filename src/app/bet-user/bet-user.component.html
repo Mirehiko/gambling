@@ -1,0 +1,21 @@
+<div class="userActions">
+    <h2 class="userInfo"><img src="{{ user.avatar }}" alt="" class="avatar">{{user.name}}</h2>
+    <div class="betBlock">
+        <!-- <div class="message">{{ message }}</div> -->
+        <label for="bet" class="betInput">Ставка:</label>
+        <input id="bet" type="number" class="betValue" [(ngModel)]="user.bet" value="{{ user.bet }}" min="1">
+
+        <div class="rates">
+            <label *ngFor="let rate of rates; index as i; first as isFirst" for="rate{{i}}" class="rate"
+                (change)="chooseRate($event, rate)">
+                <input id="rate{{i}}" type="radio" class="rateValue" name="rate" [checked]="isFirst">
+                <span class="rateText">x{{rate}}</span>
+            </label>
+        </div>
+        <button class="makeBet" (click)="makeBet()">Поставить</button>
+    </div>
+    <div class="betInfo" *ngIf="inGame">
+        <div>Ставка: {{user.bet}}</div>
+        <div>Множитель: {{user.rate}}</div>
+    </div>
+</div>

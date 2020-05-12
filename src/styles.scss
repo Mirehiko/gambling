@@ -1,0 +1,32 @@
+$text-color: #efefef;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+}
+
+body {
+  font-size: 16px;
+  color: $text-color;
+  background-color: #393b3c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+main {
+  padding: 70px 0 50px;
+  max-width: 960px;
+  height: inherit;
+  margin: 0 auto;
+  background-color: #253138;
+}

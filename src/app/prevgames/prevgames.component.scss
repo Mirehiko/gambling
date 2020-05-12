@@ -1,0 +1,24 @@
+.round {
+  padding: 3px 10px;
+  border-bottom: 1px solid #555;
+}
+
+.roundInfo {
+  display: flex;
+  margin: 0 -3px;
+}
+
+.badge {
+  padding: 1px 3px;
+  font-size: 11px;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.roundWin {
+  background-color: #3d7143;
+}
+
+.roundLose {
+  background-color: #794a4a;
+}

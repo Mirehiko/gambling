@@ -1,0 +1,19 @@
+<h2>Результаты прошлых раундов</h2>
+
+<div *ngIf="prevRounds.length; then restpl else emptytpl"></div>
+<ng-template #restpl>
+    <div class="round" *ngFor="let user of prevRounds">
+        <div>
+            {{ user.name }}:
+            <span *ngIf="user.isWin" class="badge roundWin">Победа</span>
+            <span *ngIf="user.isLose" class="badge roundLose">Поражение</span>
+        </div>
+        <div class="roundInfo">
+            <span class="badge">Ставка: {{ user.bet }}</span>
+            <span class="badge">Выигрыш: {{ user.prize }}</span>
+        </div>
+    </div>
+</ng-template>
+<ng-template #emptytpl>
+    <div>Вы не принимали участия в играх</div>
+</ng-template>

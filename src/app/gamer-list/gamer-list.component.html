@@ -1,0 +1,21 @@
+<div class="activePlayers">
+    <div class="gamers">
+        <div class="gamer" *ngFor="let gamer of gamers" [class.gamer-win]="gamer.isWin"
+            [class.gamer-lose]="gamer.isLose">
+            <div class="gamer__item gamerInfo">
+                <div><img src="{{gamer.avatar}}" alt="{{gamer.name}}"></div>
+                <div class="gamer_name">{{gamer.name}}</div>
+            </div>
+            <!-- <div class="gamer__item gamer_name">{{gamer.name}}</div> -->
+            <div class="gamer__item roundStat">
+                <div class="roundStat__item"><span class="roundBet" [class.roundBet-win]="gamer.isWin"
+                        [class.roundBet-lose]="gamer.isLose">${{gamer.bet}}</span></div>
+                <div class="roundStat__item"><span class="roundRate" [class.roundRate-win]="gamer.isWin"
+                        [class.roundRate-lose]="gamer.isLose">x{{gamer.rate}}</span></div>
+                <div class="roundStat__item" *ngIf="gamer.prize"><span class="roundPrize"
+                        [class.roundPrize-win]="gamer.isWin"
+                        [class.roundPrize-lose]="gamer.isLose">{{gamer.prize}}</span></div>
+            </div>
+        </div>
+    </div>
+</div>
